@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "CyanogenMod/android_device_cyanogen_msm8939-common",
+    "target_path": "device/cyanogen/msm8939-common",
+    "branch": "staging/cm-13.0-lettuce"
+  },
+  {
+    "repository": "darshan1205/kernel",
+    "target_path": "kernel/cyanogen/msm8916",
+    "branch": "staging/cm-13.0-lettuce"
+  }
+]

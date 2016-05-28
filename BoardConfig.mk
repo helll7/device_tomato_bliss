@@ -28,6 +28,13 @@ TARGET_KERNEL_CONFIG := cyanogenmod_tomato-64_defconfig
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+# Bliss Optimisations
+BLISSIFY := true
+BLISS_GRAPHITE := true
+WITH_LZMA_OTA := true
+BLISS_BUILDTYPE := UNOFFICIAL
+BLISS_DEVELOPER := Vjs Pranavasri
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 

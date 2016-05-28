@@ -54,7 +54,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Build ID
-TARGET_UNOFFICIAL_BUILD_ID := darshan1205
+# TARGET_UNOFFICIAL_BUILD_ID := darshan1205
 
 # Bluetooth
 PRODUCT_PACKAGES += \
