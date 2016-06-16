@@ -1,5 +1,6 @@
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril.config=simactivation \
     persist.data.target=dpm1 \
     persist.radio.multisim.config=dsds \
     ro.config.always_show_roaming=true \
