@@ -18,12 +18,31 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+$(call inherit-product, vendor/qd/common.mk)
+
+# Must define platform variant before including any common things
+TARGET_BOARD_PLATFORM_VARIANT := msm8939
+BOARD_VENDOR := yu
+
 # Inherit from tomato device
 $(call inherit-product, device/yu/tomato/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tomato
-PRODUCT_NAME := full_tomato
+PRODUCT_NAME := qd_tomato
 PRODUCT_BRAND := YU
 PRODUCT_MODEL := AO5510
 PRODUCT_MANUFACTURER := YU
+
+PRODUCT_GMS_CLIENTID_BASE := android-micromax
+
+TARGET_VENDOR_PRODUCT_NAME := YUREKA
+TARGET_VENDOR_DEVICE_NAME := YUREKA
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=YUREKA PRODUCT_NAME=YUREKA
+
+## Use the latest approved GMS identifiers unless running a signed build
+ifneq ($(SIGN_BUILD),true)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=YU/YUREKA/YUREKA:5.1.1/LMY49J/YOG4PAS8A4:user/release-keys \
+    PRIVATE_BUILD_DESC="YUREKA-user 5.1.1 LMY49J YOG4PAS8A4 release-keys"
+endif
