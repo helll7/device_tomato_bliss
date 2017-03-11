@@ -22,5 +22,3 @@ TARGET_BOARD_INFO_FILE := device/yu/tomato/board-info.txt
 
 # Inherit from proprietary files
 -include vendor/yu/tomato/BoardConfigVendor.mk
-
-TARGET_SYSTEM_PROP += device/yu/tomato/system.prop
