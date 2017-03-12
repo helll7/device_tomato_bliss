@@ -12,5 +12,4 @@ PRODUCT_COPY_FILES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false \
-    persist.camera.hal.debug.mask=0 \
-    media.camera.ts.monotonic=0
+    persist.camera.hal.debug.mask=0
